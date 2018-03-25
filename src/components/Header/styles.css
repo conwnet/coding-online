@@ -1,0 +1,79 @@
+.tab {
+    display: inline-block;
+    min-width: 45px;
+    height: 20px;
+    padding: 8px 5px;
+    font-size: 12px;
+    line-height: 20px;
+    cursor: pointer;
+    color: #545454;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: #ecf0f1;
+    user-select: none;
+}
+
+.tab:hover {
+    background-color: #f8f8f8;
+}
+
+.tab.active {
+    padding-top: 7px;
+    background-color: #fff;
+    border-top: 2px solid #1da09c;
+}
+
+.tab:first-child {
+    border-top-left-radius: 3px;
+    border-left: 1px solid #ddd;
+}
+
+.tab:last-child {
+    border-top-right-radius: 3px;
+}
+
+.tab-list {
+    margin-top: 5px;
+}
+
+.header {
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    height: 30px;
+    min-width: 40px;
+    padding: 0 15px;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+    transition: all .2s;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #449d44;
+    border-color: #398439;
+}
+
+.button:active {
+    background-color: #396439;
+    border-color: #297429;
+}
+
+.button[disabled] {
+    background-color: #8cb8ac;
+    border-color: #8cb8ac;
+}
+
+.button[disabled]:hover {
+    background-color: #8cb8ac;
+    border-color: #8cb8ac;
+}
+

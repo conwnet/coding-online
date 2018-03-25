@@ -1,0 +1,8 @@
+.code-area {
+    flex: 1;
+    background-color: #f00;
+}
+
+.code-area .CodeMirror {
+    height: 100%;
+}
