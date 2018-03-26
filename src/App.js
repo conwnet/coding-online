@@ -3,7 +3,7 @@ import {Header, CodeArea, Tools} from './components';
 import {postCode, getStatus} from './api';
 import ReactTimeout from 'react-timeout'
 import store from 'storejs';
-import {get} from 'lodash';
+import {get, assign} from 'lodash';
 import './App.css';
 
 class App extends Component {
@@ -34,7 +34,7 @@ class App extends Component {
     hanldeCodeChange = code => {
         const {language} = this.state;
         this.setState(prevState => ({
-            codes: Object.assign(prevState.codes, {[language]: code})
+            codes: assign(prevState.codes, {[language]: code})
         }));
     }
 
