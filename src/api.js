@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {get} from 'lodash';
 
-const SERVER_URL = 'http://qingr.cc'; 
+const SERVER_URL = './'; 
 
 const handleError = error => {
     throw get(error, 'response.data', {
@@ -18,11 +18,11 @@ const request = {
 };
 
 const postCode = data => (
-    request.post(`${SERVER_URL}/run.php`, data)
+    request.post(`${SERVER_URL}run.php`, data)
 );
 
 const getStatus = id => (
-    request.post(`${SERVER_URL}/check.php?id=${id}`)
+    request.post(`${SERVER_URL}check.php?id=${id}`)
 );
 
 export {postCode, getStatus};

@@ -49,7 +49,11 @@ class App extends Component {
         };
         try {
             const {interpret_id} = await postCode(data);
-            this.checkRunStatus(interpret_id, 50);
+            if (interpret_id) {
+                this.checkRunStatus(interpret_id, 50);
+            } else {
+                this.setState({status: 'error'});
+            }
         } catch (e) {
             this.setState({status: 'error'});
         }
