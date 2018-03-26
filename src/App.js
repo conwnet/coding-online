@@ -19,7 +19,7 @@ class App extends Component {
 
     componentDidMount = () => {
         const {language, codes} = store();
-        this.setState({language, codes});
+        language && this.setState({language, codes});
     }
 
     saveStatus = () => {
