@@ -1,0 +1,118 @@
+.tools {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    height: 100%;
+    display: flex;
+}
+
+.switcher {
+    height: 20px;
+    font-size: 14px;
+    padding: 0 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: block;
+    background-color: #8b8;
+    border: 1px solid #8b8;
+    border-right-width: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.switcher.active {
+    background-color: #eee;
+    border-color: #eee;
+}
+
+.switcher:hover {
+    border-color: #eee;
+}
+
+.switcher:active {
+    background-color: #bbb;
+}
+
+.icon {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    vertical-align: -1px;
+    background-size: 100%;
+}
+
+.icon.i-console {
+    background-image: url('./assets/console.svg');
+}
+
+.icon.input {
+    background-image: url('./assets/input.svg');
+}
+
+.console {
+    width: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    transition: width .2s;
+    background-color: #eee;
+    border-top: 0px solid #ddd;
+}
+
+.console .output {
+    height: 75%;
+    padding: 10px;
+    overflow: auto;
+    font-size: 14px;
+}
+
+.output .finished {
+    color: #5cb85c;
+}
+
+.output .running {
+    color: #337ab7;
+}
+
+.output .error {
+    color: #d9534f;
+}
+
+.output .error, .output .success {
+    margin-bottom: 10px;
+}
+
+.output .content {
+    white-space: pre-wrap;
+    margin-top: 5px;
+}
+
+.error .title {
+    color: #d9534f;
+}
+
+.error .content {
+    color: #d9534f;
+}
+
+.success .title {
+    color: #5cb85c;
+}
+
+.console textarea {
+    flex: 1;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    outline: none;
+    border-width: 0;
+    box-sizing: border-box;
+    border-top: 1px solid #ddd;
+}
+
+.console.active {
+    width: 450px;
+    border-top-width: 1px;
+}

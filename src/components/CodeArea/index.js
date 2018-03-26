@@ -8,6 +8,8 @@ import 'codemirror/mode/swift/swift';
 import 'codemirror/mode/clike/clike';
 import 'codemirror/mode/python/python';
 import 'codemirror/mode/javascript/javascript';
+import 'codemirror/addon/edit/closebrackets';
+import 'codemirror/addon/edit/matchbrackets';
 import './styles.css';
 
 const LANGUAGE_TO_MODE = {
@@ -29,7 +31,9 @@ const options = {
     lineNumbers: true,
     theme: 'material',
     indentUnit: 4,
-    indentWithTabs: true
+    indentWithTabs: true,
+    matchBrackets: true,
+	autoCloseBrackets: true
 };
 
 class CodeArea extends PureComponent {
@@ -39,6 +43,7 @@ class CodeArea extends PureComponent {
 
     render() {
         const {language, code} = this.props;
+    
         Object.assign(options, {mode: LANGUAGE_TO_MODE[language]});
         return <CodeMirror value={code} className="code-area" options={options} onBeforeChange={this.handleChange} />;
     }
